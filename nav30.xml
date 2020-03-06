@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="nav30" default="all">
+  
+  
+  <property file="nav30.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.apk"/>
+    <include name="*.zip"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+    <include name="*.klib"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.gradle:_androidx.annotation:annotation:1.1.0@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/e3a6fb2f40e3a3842e6b7472628ba4ce416ea4c8/annotation-1.1.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.appcompat:appcompat:1.0.2@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/f6a183f8595ca34f3d5cc99d1f8bc322/appcompat-1.0.2/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/f6a183f8595ca34f3d5cc99d1f8bc322/appcompat-1.0.2/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.arch.core:core-common:2.1.0@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.1.0/b3152fc64428c9354344bd89848ecddc09b6f07e/core-common-2.1.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.arch.core:core-runtime:2.1.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/384e1b5d703f7ead48bd253f34125353/core-runtime-2.1.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/384e1b5d703f7ead48bd253f34125353/core-runtime-2.1.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/435f1166e6a428a0025d9cd273cb35a2/asynclayoutinflater-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/435f1166e6a428a0025d9cd273cb35a2/asynclayoutinflater-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.cardview:cardview:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/ccc4f60e4549c263b614feec2a027fa2/cardview-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/ccc4f60e4549c263b614feec2a027fa2/cardview-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.collection:collection:1.0.0@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.0.0/42858b26cafdaa69b6149f45dfc2894007bc2c7a/collection-1.0.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.constraintlayout:constraintlayout-solver:1.1.3@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout-solver/1.1.3/54abe9ffb22cc9019b0b6fcc10f185cc4e67b34e/constraintlayout-solver-1.1.3.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.constraintlayout:constraintlayout:1.1.3@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/8392647ca9531c13a8f0d6b7ad086e7e/constraintlayout-1.1.3/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/8392647ca9531c13a8f0d6b7ad086e7e/constraintlayout-1.1.3/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.coordinatorlayout:coordinatorlayout:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/04087833f388d5ffa97a080d757646c2/coordinatorlayout-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/04087833f388d5ffa97a080d757646c2/coordinatorlayout-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.core:core:1.0.1@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/72b2b92ec4ab73ff21fb9bc348de3b22/core-1.0.1/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/72b2b92ec4ab73ff21fb9bc348de3b22/core-1.0.1/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.cursoradapter:cursoradapter:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/aa91d8d2653c363bbd5da9d9892260d3/cursoradapter-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/aa91d8d2653c363bbd5da9d9892260d3/cursoradapter-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.customview:customview:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/740a70a0c89c8c085b6e012b4bd7790e/customview-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/740a70a0c89c8c085b6e012b4bd7790e/customview-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.documentfile:documentfile:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/9d52be8c254a228a91eaf05f51d52923/documentfile-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/9d52be8c254a228a91eaf05f51d52923/documentfile-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.drawerlayout:drawerlayout:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/34085af895daa23049fd0af188e6a001/drawerlayout-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/34085af895daa23049fd0af188e6a001/drawerlayout-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.fragment:fragment:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/4f37a040d795d0eef135b10b20545e3f/fragment-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/4f37a040d795d0eef135b10b20545e3f/fragment-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.interpolator:interpolator:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/d4ef17d609918d2a5f5a86d1ea02678f/interpolator-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/d4ef17d609918d2a5f5a86d1ea02678f/interpolator-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.legacy:legacy-support-core-ui:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/abc680e55824c418c024460e31034ed4/legacy-support-core-ui-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/abc680e55824c418c024460e31034ed4/legacy-support-core-ui-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.legacy:legacy-support-core-utils:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/ba2af06f417607d7ef1ca9f201a0d139/legacy-support-core-utils-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/ba2af06f417607d7ef1ca9f201a0d139/legacy-support-core-utils-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.lifecycle:lifecycle-common:2.1.0@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.1.0/c67e7807d9cd6c329b9d0218b2ec4e505dd340b7/lifecycle-common-2.1.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.lifecycle:lifecycle-extensions:2.1.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/df470e1373f88845f5f332cb0d11af75/lifecycle-extensions-2.1.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/df470e1373f88845f5f332cb0d11af75/lifecycle-extensions-2.1.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.lifecycle:lifecycle-livedata-core:2.1.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/77486900ea0f341dcb2eb60412232b54/lifecycle-livedata-core-2.1.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/77486900ea0f341dcb2eb60412232b54/lifecycle-livedata-core-2.1.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.lifecycle:lifecycle-livedata:2.1.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/35ea013adaf2265b5a814edcc0e48b35/lifecycle-livedata-2.1.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/35ea013adaf2265b5a814edcc0e48b35/lifecycle-livedata-2.1.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.lifecycle:lifecycle-process:2.1.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/c75b512c68f7bb7a7c5a931aae563be5/lifecycle-process-2.1.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/c75b512c68f7bb7a7c5a931aae563be5/lifecycle-process-2.1.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.lifecycle:lifecycle-runtime:2.1.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/0554424e228349ffc3db0700d1324aa1/lifecycle-runtime-2.1.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/0554424e228349ffc3db0700d1324aa1/lifecycle-runtime-2.1.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.lifecycle:lifecycle-service:2.1.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/f297fd1a37e8f1e094c72340601523f6/lifecycle-service-2.1.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/f297fd1a37e8f1e094c72340601523f6/lifecycle-service-2.1.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/bad233a64070d55cab9a83b26afbf154/lifecycle-viewmodel-2.1.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/bad233a64070d55cab9a83b26afbf154/lifecycle-viewmodel-2.1.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.loader:loader:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/331f61861c2d3a925f2252286afb1f53/loader-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/331f61861c2d3a925f2252286afb1f53/loader-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/9093771a98b01557e81860f4122d7892/localbroadcastmanager-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/9093771a98b01557e81860f4122d7892/localbroadcastmanager-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.print:print:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/7ec682ca46f5c90ea9a9e0cba0c0310a/print-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/7ec682ca46f5c90ea9a9e0cba0c0310a/print-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.recyclerview:recyclerview:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/bbc51c53aec70aeae5178e82f15e817a/recyclerview-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/bbc51c53aec70aeae5178e82f15e817a/recyclerview-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/eb11c4797d5d5b24d5dcbbebe26babf4/slidingpanelayout-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/eb11c4797d5d5b24d5dcbbebe26babf4/slidingpanelayout-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/31dc29ba3158cee4b1ca2bf2f6ff141b/swiperefreshlayout-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/31dc29ba3158cee4b1ca2bf2f6ff141b/swiperefreshlayout-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.test.espresso:espresso-core:3.1.1@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/51f1ff1035f2f18fcc7bba99bee9c390/espresso-core-3.1.1/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/51f1ff1035f2f18fcc7bba99bee9c390/espresso-core-3.1.1/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.test.espresso:espresso-idling-resource:3.1.1@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/828bb1016b78f646dfacbf8ad477b694/espresso-idling-resource-3.1.1/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/828bb1016b78f646dfacbf8ad477b694/espresso-idling-resource-3.1.1/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.test:monitor:1.1.1@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/6872c5a8532a8b3aefacd55995816265/monitor-1.1.1/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/6872c5a8532a8b3aefacd55995816265/monitor-1.1.1/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.test:runner:1.1.1@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/f5966ec37d88b45e46aa2065053a2078/runner-1.1.1/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/f5966ec37d88b45e46aa2065053a2078/runner-1.1.1/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.transition:transition:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/402e2fb3baa5e6ca3b4a0d7ccbd7cd5b/transition-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/402e2fb3baa5e6ca3b4a0d7ccbd7cd5b/transition-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.vectordrawable:vectordrawable-animated:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/d382ba9b8c9ea9d7b43a9cfaea0ecdf4/vectordrawable-animated-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/d382ba9b8c9ea9d7b43a9cfaea0ecdf4/vectordrawable-animated-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.vectordrawable:vectordrawable:1.0.1@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/324a702de98e8e0560de88ae82ee3427/vectordrawable-1.0.1/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/324a702de98e8e0560de88ae82ee3427/vectordrawable-1.0.1/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.versionedparcelable:versionedparcelable:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/07608d1ce0a2b5e25216bbe877b06158/versionedparcelable-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/07608d1ce0a2b5e25216bbe877b06158/versionedparcelable-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_androidx.viewpager:viewpager:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/f3997ce16a5c00ae84a772d300d0e1e8/viewpager-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/f3997ce16a5c00ae84a772d300d0e1e8/viewpager-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.android.gms:play-services-base:17.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/291563c6708268cf4683b088770f2b39/play-services-base-17.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/291563c6708268cf4683b088770f2b39/play-services-base-17.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.android.gms:play-services-basement:17.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/7391526d319e1b35d97fab4070d7b2bc/jetified-play-services-basement-17.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/7391526d319e1b35d97fab4070d7b2bc/jetified-play-services-basement-17.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.android.gms:play-services-location:15.0.1@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/389d42125ef31bca139e402525cef473/jetified-play-services-location-15.0.1/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/389d42125ef31bca139e402525cef473/jetified-play-services-location-15.0.1/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.android.gms:play-services-maps:17.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/71410d59386dba98cbe61d29bc62f196/play-services-maps-17.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/71410d59386dba98cbe61d29bc62f196/play-services-maps-17.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.android.gms:play-services-places-placereport:15.0.1@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/23ffdc68df024d59848ff6dd22052172/play-services-places-placereport-15.0.1/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/23ffdc68df024d59848ff6dd22052172/play-services-places-placereport-15.0.1/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.android.gms:play-services-tasks:17.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/3087f829ad78da1f0d52970740cc50c8/play-services-tasks-17.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/3087f829ad78da1f0d52970740cc50c8/play-services-tasks-17.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.android.material:material:1.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/cb634fe4b4d1fdfcd5255e485d30a0c1/material-1.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/cb634fe4b4d1fdfcd5255e485d30a0c1/material-1.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.code.findbugs:jsr305:2.0.1@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.karumi:dexter:5.0.0@aar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/13ebeb02b9d66145f9e6f4cc6e5c7819/jetified-dexter-5.0.0/res"/>
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/transforms-2/files-2.1/13ebeb02b9d66145f9e6f4cc6e5c7819/jetified-dexter-5.0.0/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup:javawriter:2.1.1@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.1.1/67ff45d9ae02e583d0f9b3432a5ebbe05c30c966/javawriter-2.1.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_javax.inject:javax.inject:1@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_junit:junit:4.12@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar"/>
+  </path>
+  
+  <path id="library.gradle:_net.sf.kxml:kxml2:2.3.0@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/ccbc77a5fd907ef863c29f3596c6f54ffa4e9442/kxml2-2.3.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.hamcrest:hamcrest-core:1.3@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.hamcrest:hamcrest-integration:1.3@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-integration/1.3/5de0c73fef18917cd85d0ab70bb23818685e4dfd/hamcrest-integration-1.3.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.hamcrest:hamcrest-library:1.3@jar.classpath">
+    <pathelement location="C:/Users/TechnoFreak/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-library/1.3/4785a3c21320980282f9f33d0d1264a69040538f/hamcrest-library-1.3.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <fileset dir="${javac2.home}">
+      <include name="javac2.jar"/>
+      <include name="jdom.jar"/>
+      <include name="asm-all*.jar"/>
+      <include name="forms-*.jar"/>
+    </fileset>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/app/module_app.xml"/>
+  
+  <import file="${basedir}/module_nav30.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.app, clean.module.nav30" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.app, compile.module.nav30" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>
